@@ -1,4 +1,5 @@
-
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 #[Super SloMo]
 ##High Quality Estimation of Multiple Intermediate Frames for Video Interpolation
 

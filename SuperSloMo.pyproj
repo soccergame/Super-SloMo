@@ -1,0 +1,55 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>330373dc-92f5-4e3c-85f1-d0b8c5b4e4f2</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>
+    </StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>SuperSloMo</Name>
+    <RootNamespace>SuperSloMo</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="data\" />
+    <Folder Include="data\adobe240fps\" />
+    <Folder Include="misc\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data\adobe240fps\test_list.txt" />
+    <Content Include="data\adobe240fps\train_list.txt" />
+    <Content Include="LICENSE" />
+    <Content Include="misc\original.gif" />
+    <Content Include="misc\slomo.gif" />
+    <Content Include="README.md" />
+    <Content Include="train.ipynb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dataloader.py" />
+    <Compile Include="data\create_dataset.py" />
+    <Compile Include="eval.py" />
+    <Compile Include="model.py" />
+    <Compile Include="train.py" />
+    <Compile Include="video_to_slomo.py" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
